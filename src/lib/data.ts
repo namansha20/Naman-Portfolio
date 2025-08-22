@@ -72,8 +72,8 @@ export const portfolioData: PortfolioData = {
     title: 'SAP Enthusiast & BTP CAPM Developer',
     subtitle: 'Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.',
     social: {
-      linkedin: 'https://www.linkedin.com/',
-      github: 'https://github.com/',
+      linkedin: 'https://www.linkedin.com/in/namans20/',
+      github: 'https://github.com/namansha20',
     },
   },
   summary: `SAP Enthusiast & BTP CAPM Developer with hands-on experience in building scalable applications and solving real-world problems using SAP BTP, CAPM, UI5/Fiori, and cloud technologies. Skilled in applying Design Thinking to craft innovative and user-focused solutions. Strong foundation in Java, Node.js, complemented by academic projects and hackathon leadership. Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.`,
@@ -119,7 +119,7 @@ export const portfolioData: PortfolioData = {
       title: 'FEM S.H.I.E.L.D',
       description: "Engineered a web application to enhance women's safety, featuring real-time alerts and a resource locator. Utilized PHP for backend user management and JavaScript for a dynamic, responsive user interface.",
       technologies: ['Html', 'CSS', 'JS', 'PHP'],
-      image: 'https://placehold.co/600x400.png',
+      image: '',
       aiHint: 'safety app',
       links: {
         github: 'https://github.com/',
@@ -141,10 +141,10 @@ export const portfolioData: PortfolioData = {
       title: 'Library Bookshop',
       description: 'Engineered a cloud-native bookshop management system on SAP BTP using the Cloud Application Programming Model with Node.js. The application features a Fiori Elements UI for intuitive inventory management, supported by OData services and an SAP HANA Cloud database.',
       technologies: ['SAP BTP', 'Node.js', 'CAP', 'HANA'],
-      image: 'https://placehold.co/600x400.png',
+      image: '',
       aiHint: 'bookshop inventory',
       links: {
-        github: 'https://github.com/',
+        github: 'https://github.com/namansha20/library-bookshop',
         live: '#',
       },
     },
@@ -152,7 +152,7 @@ export const portfolioData: PortfolioData = {
       title: 'Performance Tracker For Institutions',
       description: 'Architected a secure performance tracking portal for educational institutions on SAP BTP, enabling detailed record management for students and staff. Utilized Node.js and CAP for the service layer and implemented role-based access control with XSUAA to ensure data privacy within the HANA Cloud database.',
       technologies: ['SAP BTP', 'Node.js', 'CAP', 'HANA', 'Fiori'],
-      image: 'https://placehold.co/600x400.png',
+      image: '',
       aiHint: 'education portal',
       links: {
         github: 'https://github.com/',
