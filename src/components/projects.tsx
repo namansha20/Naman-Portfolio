@@ -26,14 +26,15 @@ export default function Projects({ projects, isTailoring }: ProjectsProps) {
             <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="aspect-video relative mb-4">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-t-lg"
-                    data-ai-hint={project.aiHint}
-                  />
+                  {project.image && (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="rounded-t-lg object-cover"
+                      data-ai-hint={project.aiHint}
+                    />
+                  )}
                 </div>
                 <CardTitle>{project.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 pt-2">

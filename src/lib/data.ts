@@ -119,7 +119,7 @@ export const portfolioData: PortfolioData = {
       title: 'FEM S.H.I.E.L.D',
       description: "Engineered a web application to enhance women's safety, featuring real-time alerts and a resource locator. Utilized PHP for backend user management and JavaScript for a dynamic, responsive user interface.",
       technologies: ['Html', 'CSS', 'JS', 'PHP'],
-      image: '',
+      image: 'https://picsum.photos/600/400',
       aiHint: 'safety app',
       links: {
         github: 'https://github.com/',
@@ -130,7 +130,7 @@ export const portfolioData: PortfolioData = {
       title: 'WaterTrack',
       description: 'Developed a full-stack cloud application on SAP BTP to monitor and manage water usage for industrial factories. Built the backend with Node.js and the Cloud Application Programming Model (CAP) to expose OData services, using SAP HANA Cloud for data persistence.',
       technologies: ['SAP BTP', 'Node.js', 'CAP', 'HANA', 'Ui5 Fiori'],
-      image: 'https://placehold.co/600x400.png',
+      image: 'https://picsum.photos/600/400',
       aiHint: 'industrial analytics',
       links: {
         github: 'https://github.com/',
@@ -141,7 +141,7 @@ export const portfolioData: PortfolioData = {
       title: 'Library Bookshop',
       description: 'Engineered a cloud-native bookshop management system on SAP BTP using the Cloud Application Programming Model with Node.js. The application features a Fiori Elements UI for intuitive inventory management, supported by OData services and an SAP HANA Cloud database.',
       technologies: ['SAP BTP', 'Node.js', 'CAP', 'HANA'],
-      image: '',
+      image: 'https://picsum.photos/600/400',
       aiHint: 'bookshop inventory',
       links: {
         github: 'https://github.com/namansha20/library-bookshop',
@@ -152,7 +152,7 @@ export const portfolioData: PortfolioData = {
       title: 'Performance Tracker For Institutions',
       description: 'Architected a secure performance tracking portal for educational institutions on SAP BTP, enabling detailed record management for students and staff. Utilized Node.js and CAP for the service layer and implemented role-based access control with XSUAA to ensure data privacy within the HANA Cloud database.',
       technologies: ['SAP BTP', 'Node.js', 'CAP', 'HANA', 'Fiori'],
-      image: '',
+      image: 'https://picsum.photos/600/400',
       aiHint: 'education portal',
       links: {
         github: 'https://github.com/',
