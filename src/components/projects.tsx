@@ -25,8 +25,8 @@ export default function Projects({ projects, isTailoring }: ProjectsProps) {
           {projects.map((project, index) => (
             <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
-                <div className="aspect-video relative mb-4">
-                  {project.image && (
+                {project.image.startsWith('data:image') ? null : (
+                  <div className="aspect-video relative mb-4">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -34,8 +34,8 @@ export default function Projects({ projects, isTailoring }: ProjectsProps) {
                       className="rounded-t-lg object-cover"
                       data-ai-hint={project.aiHint}
                     />
-                  )}
-                </div>
+                  </div>
+                )}
                 <CardTitle>{project.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.technologies.map(tech => (
