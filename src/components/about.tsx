@@ -57,7 +57,7 @@ export default function About({ summary, education, internships, certifications,
           </CardContent>
         </Card>
 
-        <Accordion type="multiple" className="w-full space-y-4">
+        <Accordion type="multiple" className="w-full space-y-4" defaultValue={["Education", "Internships", "Certifications", "Achievements"]}>
           <SectionCard title="Education" icon={<GraduationCap />}>
             <ul className="space-y-4">
               {education.map((edu, i) => (
