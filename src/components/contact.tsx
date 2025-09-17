@@ -11,6 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import type { ContactData } from '@/lib/data';
+import { sendContactEmail } from '@/app/actions/send-contact-email';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -31,13 +32,21 @@ export default function Contact({ contact }: ContactProps) {
     defaultValues: { name: '', email: '', message: '' },
   });
 
-  function onSubmit(data: ContactFormValues) {
-    console.log('Form submitted:', data);
-    toast({
-      title: 'Message Sent!',
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(data: ContactFormValues) {
+    try {
+      await sendContactEmail(data);
+      toast({
+        title: 'Message Sent!',
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        variant: 'destructive',
+        title: 'Uh oh! Something went wrong.',
+        description: 'There was a problem sending your message. Please try again later.',
+      });
+    }
   }
 
   return (
