@@ -87,4 +87,13 @@ body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
   }
+  
+  /* Add tap effect for touch devices */
+  @media (hover: none) {
+    button:active,
+    a:active,
+    [role="button"]:active {
+      @apply scale-95 opacity-80 transition-transform duration-75;
+    }
+  }
 }
