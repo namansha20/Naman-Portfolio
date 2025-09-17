@@ -11,7 +11,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import type { ContactData } from '@/lib/data';
-import { sendContactEmail } from '@/app/actions/send-contact-email';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -32,19 +31,24 @@ export default function Contact({ contact }: ContactProps) {
     defaultValues: { name: '', email: '', message: '' },
   });
 
-  async function onSubmit(data: ContactFormValues) {
+  function onSubmit(data: ContactFormValues) {
+    const subject = encodeURIComponent(`New message from ${data.name} via your portfolio`);
+    const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`);
+    const mailtoLink = `mailto:${contact.email}?subject=${subject}&body=${body}`;
+    
     try {
-      await sendContactEmail(data);
+      window.location.href = mailtoLink;
       toast({
-        title: 'Message Sent!',
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        title: 'Email client opened!',
+        description: "Your message is ready to be sent.",
       });
       form.reset();
     } catch (error) {
+      console.error('Failed to open mail client:', error);
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
-        description: 'There was a problem sending your message. Please try again later.',
+        description: 'Could not open your email client. Please copy the message and send it manually.',
       });
     }
   }
@@ -116,8 +120,8 @@ export default function Contact({ contact }: ContactProps) {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
-                    {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
+                  <Button type="submit" className="w-full">
+                    Send Message
                   </Button>
                 </form>
               </Form>
