@@ -39,7 +39,7 @@ export default function Header({ onProfileChange, isTailoring }: HeaderProps) {
             <DynamicContentToggle onProfileChange={onProfileChange} isLoading={isTailoring} />
           </div>
           <Button asChild>
-            <a href="https://drive.google.com/file/d/1RKZVw46XR55GCp-H6G1wX3VCguQqbWp6/view?usp=sharing" download="Naman_Sharma_Resume.pdf">
+            <a href="https://drive.google.com/file/d/19b1r7-5egE-h9QhaO5H5-0d9L7qoHsK3/view?usp=sharing" download="Naman_Sharma_Resume.pdf">
               <Download className="mr-2 h-4 w-4" />
               Resume
             </a>
