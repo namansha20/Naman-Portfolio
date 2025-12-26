@@ -1,20 +1,12 @@
 'use client';
 
 import GitHubCalendar from 'react-github-calendar';
-import { useTheme } from 'next-themes';
-import type { ThemeInput } from 'react-github-calendar';
 
 type GithubActivityProps = {
   username: string;
 };
 
 export default function GithubActivity({ username }: GithubActivityProps) {
-  const { theme } = useTheme();
-
-  const explicitTheme: ThemeInput = {
-    light: ['hsl(0 0% 92%)', 'hsl(212 45% 27%)'],
-    dark: ['hsl(0 0% 92%)', 'hsl(212 45% 27%)'],
-  };
 
   return (
     <section id="github-activity" className="py-16">
@@ -31,8 +23,7 @@ export default function GithubActivity({ username }: GithubActivityProps) {
                 blockSize={15}
                 blockMargin={5}
                 fontSize={16}
-                theme={explicitTheme}
-                colorScheme={'light'}
+                colorScheme="light"
             />
         </div>
       </div>
