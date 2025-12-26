@@ -13,7 +13,7 @@ export default function GithubActivity({ username }: GithubActivityProps) {
 
   const explicitTheme: ThemeInput = {
     light: ['hsl(0 0% 92%)', 'hsl(212 45% 27%)'],
-    dark: ['hsl(212 45% 15%)', 'hsl(0 0% 90%)'],
+    dark: ['hsl(0 0% 92%)', 'hsl(212 45% 27%)'],
   };
 
   return (
@@ -32,7 +32,7 @@ export default function GithubActivity({ username }: GithubActivityProps) {
                 blockMargin={5}
                 fontSize={16}
                 theme={explicitTheme}
-                colorScheme={theme === 'dark' ? 'dark' : 'light'}
+                colorScheme={'light'}
             />
         </div>
       </div>
