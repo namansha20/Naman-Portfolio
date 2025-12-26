@@ -6,6 +6,7 @@ import Hero from '@/components/hero';
 import About from '@/components/about';
 import Skills from '@/components/skills';
 import Projects from '@/components/projects';
+import GithubActivity from '@/components/github-activity';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
 import { portfolioData } from '@/lib/data';
@@ -59,6 +60,7 @@ export default function Home() {
         />
         <Skills skills={portfolioData.skills} />
         <Projects projects={tailoredProjectData} isTailoring={isTailoring}/>
+        <GithubActivity username={portfolioData.hero.social.github.split('/').pop()!} />
         <Contact contact={portfolioData.contact} />
       </div>
       <Footer />
