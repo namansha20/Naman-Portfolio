@@ -2,6 +2,7 @@
 
 import GitHubCalendar from 'react-github-calendar';
 import { useTheme } from 'next-themes';
+import type { ThemeInput } from 'react-github-calendar';
 
 type GithubActivityProps = {
   username: string;
@@ -10,22 +11,9 @@ type GithubActivityProps = {
 export default function GithubActivity({ username }: GithubActivityProps) {
   const { theme } = useTheme();
 
-  const colorScheme = theme === 'dark' ? 'dark' : 'light';
-
-  const lightTheme = {
-    level0: '#F0F0F0', // bg-muted
-    level1: '#C6E48B',
-    level2: '#7BC96F',
-    level3: '#239A3B',
-    level4: '#196127',
-  };
-  
-  const darkTheme = {
-    level0: 'hsl(212 45% 15%)', // card
-    level1: '#0e4429',
-    level2: '#006d32',
-    level3: '#26a641',
-    level4: '#39d353',
+  const explicitTheme: ThemeInput = {
+    light: ['hsl(0 0% 92%)', 'hsl(212 45% 27%)'],
+    dark: ['hsl(212 45% 15%)', 'hsl(0 0% 90%)'],
   };
 
   return (
@@ -43,7 +31,8 @@ export default function GithubActivity({ username }: GithubActivityProps) {
                 blockSize={15}
                 blockMargin={5}
                 fontSize={16}
-                theme={theme === 'dark' ? darkTheme : lightTheme}
+                theme={explicitTheme}
+                colorScheme={theme === 'dark' ? 'dark' : 'light'}
             />
         </div>
       </div>
