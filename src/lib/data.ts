@@ -1,3 +1,4 @@
+
 export type HeroData = {
   name: string;
   title: string;
@@ -76,7 +77,7 @@ export const portfolioData: PortfolioData = {
       github: 'https://github.com/namansha20',
     },
   },
-  summary: `SAP Enthusiast & BTP CAPM Developer with hands-on experience in building scalable applications and solving real-world problems using SAP BTP, CAPM, UI5/Fiori, and cloud technologies. Skilled in applying Design Thinking to craft innovative and user-focused solutions. Strong foundation in Java, Node.js, complemented by academic projects and hackathon leadership. Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.`,
+  summary: `SAP Enthusiast & BTP CAPM Developer with hands-on experience in building scalable applications and solving real-world problems using SAP BTP, CAPM, UI5/Fiori, and cloud technologies. Skilled in applying Design Thinking to craft innovative and user-focused solutions, with a growing focus on python and generative ai learning in SAP. Strong foundation in Python, Node.js, complemented by academic projects and hackathon leadership. Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.`,
   education: [
     {
       university: 'Poornima University',
@@ -106,12 +107,12 @@ export const portfolioData: PortfolioData = {
     },
   ],
   skills: {
-    'Programming Languages': ['Java', 'JavaScript', 'SQL'],
+    'Programming Languages': ['Python', 'JavaScript', 'SQL'],
     'SAP Technologies': ['SAP BTP', 'CAP (Cloud Application Programming)', 'SAP Fiori', 'SAP UI5', 'CDS Annotations', 'HANA'],
-    'Web Development': ['HTML5', 'CSS', 'JAVA'],
+    'Web Development': ['HTML5', 'CSS'],
     'Cloud & Platforms': ['Amazon Web Services (AWS)', 'SAP BTP'],
     'Version Control & Collaboration': ['Git', 'GitHub'],
-    'Frameworks & Tools': ['Spring', 'Node.js', 'Power BI'],
+    'Frameworks & Tools': ['Node.js'],
     'Development Methodologies': ['Agile', 'Sprint'],
   },
   projects: [

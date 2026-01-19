@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['VT323', 'monospace'],
-        headline: ['VT323', 'monospace'],
+        body: ['"Press Start 2P"', 'cursive'],
+        headline: ['"Press Start 2P"', 'cursive'],
         code: ['monospace'],
       },
       colors: {
