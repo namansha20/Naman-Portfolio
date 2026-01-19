@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Alegreya SC"', 'serif'],
-        headline: ['"Alegreya SC"', 'serif'],
+        body: ['"Arima"', 'serif'],
+        headline: ['"Arima"', 'serif'],
         code: ['monospace'],
       },
       colors: {
