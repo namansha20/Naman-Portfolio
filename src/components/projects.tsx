@@ -13,7 +13,7 @@ type ProjectsProps = {
 
 export default function Projects({ projects, isTailoring }: ProjectsProps) {
   return (
-    <section id="projects" className="py-16 bg-muted">
+    <section id="projects" className="py-16 bg-muted/50">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-primary">Projects</h2>
@@ -23,7 +23,7 @@ export default function Projects({ projects, isTailoring }: ProjectsProps) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <Card key={index} className="flex flex-col shadow-lg card-lift-on-hover">
               <CardHeader>
                 {project.image.startsWith('data:image') ? null : (
                   <div className="aspect-video relative mb-4">
@@ -39,7 +39,7 @@ export default function Projects({ projects, isTailoring }: ProjectsProps) {
                 <CardTitle>{project.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.technologies.map(tech => (
-                    <Badge key={tech} variant="outline">{tech}</Badge>
+                    <Badge key={tech} variant="secondary">{tech}</Badge>
                   ))}
                 </div>
               </CardHeader>

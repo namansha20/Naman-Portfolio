@@ -7,8 +7,8 @@ type GithubActivityProps = {
 };
 
 const MINECRAFT_THEME = {
-  light: ['#c6c6c6', '#A1D385', '#74B456', '#4E8732', '#30591D'],
-  dark: ['#c6c6c6', '#A1D385', '#74B456', '#4E8732', '#30591D'],
+  light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+  dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
 };
 
 export default function GithubActivity({ username }: GithubActivityProps) {

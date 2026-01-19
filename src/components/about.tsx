@@ -14,7 +14,7 @@ type AboutProps = {
 };
 
 const SectionCard = ({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
-  <Card>
+  <Card className="card-lift-on-hover">
     <AccordionItem value={title}>
       <AccordionTrigger className="p-6">
         <div className="flex items-center gap-4">
@@ -31,7 +31,7 @@ const SectionCard = ({ title, icon, children }: { title: string; icon: React.Rea
 
 export default function About({ summary, education, internships, certifications, achievements, isTailoring }: AboutProps) {
   return (
-    <section id="about" className="py-16 bg-muted">
+    <section id="about" className="py-16 bg-muted/50">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-primary">About Me</h2>
@@ -40,7 +40,7 @@ export default function About({ summary, education, internships, certifications,
           </p>
         </div>
         
-        <Card className="mb-8 shadow-lg">
+        <Card className="mb-8 shadow-lg card-lift-on-hover">
           <CardHeader>
             <CardTitle>Professional Summary</CardTitle>
           </CardHeader>
