@@ -29,7 +29,7 @@ export default function Skills({ skills }: SkillsProps) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(skills).map(([category, skillList]) => (
-            <Card key={category} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card key={category} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
                 <div className="p-2 bg-primary/10 rounded-md text-primary">
                   {iconMap[category] || <Code className="h-6 w-6" />}
