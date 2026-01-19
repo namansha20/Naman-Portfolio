@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Press Start 2P"', 'cursive'],
-        headline: ['"Press Start 2P"', 'cursive'],
+        body: ['"Alegreya SC"', 'serif'],
+        headline: ['"Alegreya SC"', 'serif'],
         code: ['monospace'],
       },
       colors: {

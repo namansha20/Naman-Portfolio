@@ -77,7 +77,7 @@ export const portfolioData: PortfolioData = {
       github: 'https://github.com/namansha20',
     },
   },
-  summary: `SAP Enthusiast & BTP CAPM Developer with hands-on experience in building scalable applications and solving real-world problems using SAP BTP, CAPM, UI5/Fiori, and cloud technologies. Skilled in applying Design Thinking to craft innovative and user-focused solutions, with a growing focus on python and generative ai learning in SAP. Strong foundation in Python, Node.js, complemented by academic projects and hackathon leadership. Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.`,
+  summary: `SAP Enthusiast & BTP CAPM Developer with hands-on experience in building scalable applications and solving real-world problems using SAP BTP, CAPM, UI5/Fiori, and cloud technologies. Skilled in applying Design Thinking to craft innovative and user-focused solutions, with a growing focus on Python and Generative AI learning in SAP. Strong foundation in Python, Node.js, complemented by academic projects and hackathon leadership. Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.`,
   education: [
     {
       university: 'Poornima University',
