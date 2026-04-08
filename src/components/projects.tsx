@@ -3,7 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
 import type { Project } from '@/lib/data';
 
 type ProjectsProps = {
@@ -61,15 +61,6 @@ export default function Projects({ projects, isTailoring }: ProjectsProps) {
                       <Github className="mr-2 h-4 w-4" />
                       GitHub
                     </a>
-                  </Button>
-                )}
-                {project.links.live && (
-                  <Button asChild>
-                    <a href={project.links.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-  
                   </Button>
                 )}
               </CardFooter>
