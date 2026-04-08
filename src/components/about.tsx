@@ -1,13 +1,13 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import type { Education, Internship, Certification, Achievement } from "@/lib/data";
+import type { Education, Training, Certification, Achievement } from "@/lib/data";
 import { GraduationCap, Briefcase, Award, Trophy, Star } from "lucide-react";
 
 type AboutProps = {
   summary: string;
   education: Education[];
-  internships: Internship[];
+  trainings: Training[];
   certifications: Certification[];
   achievements: Achievement[];
   isTailoring: boolean;
@@ -29,7 +29,7 @@ const SectionCard = ({ title, icon, children }: { title: string; icon: React.Rea
   </Card>
 );
 
-export default function About({ summary, education, internships, certifications, achievements, isTailoring }: AboutProps) {
+export default function About({ summary, education, trainings, certifications, achievements, isTailoring }: AboutProps) {
   return (
     <section id="about" className="py-16 bg-muted/50">
       <div className="container">
@@ -57,7 +57,7 @@ export default function About({ summary, education, internships, certifications,
           </CardContent>
         </Card>
 
-        <Accordion type="multiple" className="w-full space-y-4" defaultValue={["Education", "Internships", "Certifications", "Achievements"]}>
+        <Accordion type="multiple" className="w-full space-y-4" defaultValue={["Education", "Trainings", "Certifications", "Achievements"]}>
           <SectionCard title="Education" icon={<GraduationCap />}>
             <ul className="space-y-4">
               {education.map((edu, i) => (
@@ -70,13 +70,13 @@ export default function About({ summary, education, internships, certifications,
             </ul>
           </SectionCard>
 
-          <SectionCard title="Internships" icon={<Briefcase />}>
+          <SectionCard title="Trainings" icon={<Briefcase />}>
             <ul className="space-y-4">
-              {internships.map((intern, i) => (
+              {trainings.map((training, i) => (
                 <li key={i} className="pl-4 border-l-2 border-primary">
-                  <p className="font-semibold">{intern.role}, {intern.company}</p>
-                  <p className="text-sm text-muted-foreground">{intern.period}</p>
-                  <p className="text-sm mt-1">{intern.description}</p>
+                  <p className="font-semibold">{training.role}, {training.company}</p>
+                  <p className="text-sm text-muted-foreground">{training.period}</p>
+                  <p className="text-sm mt-1">{training.description}</p>
                 </li>
               ))}
             </ul>

@@ -40,5 +40,4 @@ next-env.d.ts
 .genkit/*
 .env*
 
-
 firestore-debug.log

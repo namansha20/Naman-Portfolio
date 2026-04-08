@@ -53,7 +53,7 @@ export default function Home() {
         <About
           summary={tailoredContent ? tailoredContent.tailoredAboutMe : portfolioData.summary}
           education={portfolioData.education}
-          internships={portfolioData.internships}
+          trainings={portfolioData.Trainings}
           certifications={portfolioData.certifications}
           achievements={portfolioData.achievements}
           isTailoring={isTailoring}

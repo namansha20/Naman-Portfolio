@@ -16,7 +16,7 @@ export type Education = {
   grade: string;
 };
 
-export type Internship = {
+export type Training = {
   company: string;
   role: string;
   period: string;
@@ -58,7 +58,7 @@ type PortfolioData = {
   hero: HeroData;
   summary: string;
   education: Education[];
-  internships: Internship[];
+  Trainings: Training[];
   skills: SkillsData;
   projects: Project[];
   certifications: Certification[];
@@ -69,14 +69,18 @@ type PortfolioData = {
 export const portfolioData: PortfolioData = {
   hero: {
     name: 'Naman Sharma',
-    title: 'SAP Enthusiast & BTP CAPM Developer',
-    subtitle: 'Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.',
+    title: 'SAP BTP CAPM Developer | Node.js | Python | Generative AI',
+    subtitle: 'Passionate about solving real-world problems using SAP BTP, CAPM, and modern cloud technologies. Focused on backend systems, clean architecture, and exploring Generative AI to build smarter applications.',
     social: {
       linkedin: 'https://www.linkedin.com/in/namans20/',
       github: 'https://github.com/namansha20',
     },
   },
-  summary: `SAP Enthusiast & BTP CAPM Developer with hands-on experience in building scalable applications and solving real-world problems using SAP BTP, CAPM, UI5/Fiori, and cloud technologies. Skilled in applying Design Thinking to craft innovative and user-focused solutions, with a growing focus on Python and Generative AI learning in SAP. Strong foundation in Python, Node.js, complemented by academic projects and hackathon leadership. Passionate about bridging technology and business, aiming to grow into SAP Development & Consulting roles while contributing to impactful digital transformation initiatives.`,
+  summary: `SAP BTP CAPM Developer with hands-on experience building scalable, cloud-native applications using SAP BTP, CAPM, and SAP Fiori Elements. Strong foundation in Node.js and REST API design, with experience developing real-world projects like AI-powered assistants and cloud-deployed backend systems.
+
+Skilled in designing modular architectures, integrating APIs, and working with data-driven systems. Currently exploring Generative AI and Python to build intelligent, future-ready applications.
+
+Passionate about combining technology and business to create impactful digital solutions.`,
   education: [
     {
       university: 'Poornima University',
@@ -91,7 +95,7 @@ export const portfolioData: PortfolioData = {
       grade: 'Percentage: 74%',
     },
   ],
-  internships: [
+  Trainings: [
     {
       company: 'Anubhav Trainings',
       role: 'SAP UI5 Fiori',
@@ -121,7 +125,7 @@ export const portfolioData: PortfolioData = {
       image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
       aiHint: 'SAP assistant',
       links: {
-        github: '#',
+        github: 'https://github.com/namansha20/sap-copilot',
       },
     },
     {
@@ -131,7 +135,7 @@ export const portfolioData: PortfolioData = {
       image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
       aiHint: 'university chatbot',
       links: {
-        github: '#',
+        github: 'https://github.com/namansha20/pu-chatbot',
       },
     },
     {
@@ -141,7 +145,7 @@ export const portfolioData: PortfolioData = {
       image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
       aiHint: 'asteroid detection',
       links: {
-        github: '#',
+        github: 'https://github.com/namansha20/orion-eye',
       },
     },
     {
@@ -151,7 +155,7 @@ export const portfolioData: PortfolioData = {
       image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
 aiHint: 'developer portfolio',
       links: {
-        github: '#',
+        github: 'https://github.com/namansha20/Naman-Portfolio',
       },
     },
     {
@@ -166,6 +170,7 @@ aiHint: 'developer portfolio',
     },
   ],
   certifications: [
+    { name: 'SAP Generative AI on SAP BTP', issuer: 'Anubhav Training' },
     { name: 'SAP Cloud Application Programming Model', issuer: 'SAP' },
     { name: 'SAP BTP CAPM (Cloud Application Programming Model)', issuer: 'Anubhav Trainings' },
     { name: 'UI5 & Fiori training with O-Data on BAS', issuer: 'Anubhav Trainings' },
@@ -184,7 +189,7 @@ aiHint: 'developer portfolio',
     },
   ],
   contact: {
-    email: '2023csnaman16279@poornima.edu.in',
+    email: 'namangdc@gmail.com',
     phone: '+91 94613 61338',
     location: 'Jaipur, Rajasthan',
   },
