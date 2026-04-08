@@ -38,14 +38,13 @@ export type SkillsData = {
 };
 
 export type Project = {
-  title: string;
+  title:string;
   description: string;
   technologies: string[];
   image: string;
   aiHint: string;
   links: {
     github?: string;
-    live?: string;
   };
 };
 
@@ -107,13 +106,12 @@ export const portfolioData: PortfolioData = {
     },
   ],
   skills: {
-    'Programming Languages': ['Python', 'JavaScript', 'SQL'],
-    'SAP Technologies': ['SAP BTP', 'CAP (Cloud Application Programming)', 'SAP Fiori', 'SAP UI5', 'CDS Annotations', 'HANA'],
-    'Web Development': ['HTML5', 'CSS'],
-    'Cloud & Platforms': ['Amazon Web Services (AWS)', 'SAP BTP'],
-    'Version Control & Collaboration': ['Git', 'GitHub'],
-    'Frameworks & Tools': ['Node.js'],
-    'Development Methodologies': ['Agile', 'Sprint'],
+    'Languages': ['JavaScript', 'Python'],
+    'Frameworks & Libraries': ['Node.js', 'CAP (Cloud Application Programming Model)', 'FastAPI', 'Streamlit'],
+    'SAP Specialized': ['SAP Fiori Elements', 'HANA Basics', 'SAP BTP MTA Deployment'],
+    'Platform': ['SAP Business Technology Platform', 'Cloud Foundry', 'Firebase'],
+    'AIML': ['Google Gemini (Genkit)', 'TF-IDF / Cosine Similarity', 'n8n Workflow Automation', 'Groq API'],
+    'Tools': ['Git & GitHub', 'SQLite', 'REST API Design'],
   },
   projects: [
     {
@@ -151,7 +149,7 @@ export const portfolioData: PortfolioData = {
       description: 'Built a Next.js 15 single-page portfolio with TypeScript and Tailwind CSS, featuring dark/light theming, responsive grid layout, and live GitHub contribution heatmap. Wired Google Gemini 2.0 Flash via Genkit Server Actions. Centralized all content in a single portfolioData object so AI overrides apply at runtime without touching source data, then shipped to Firebase App Hosting with Zod-validated contact forms.',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Genkit', 'Firebase'],
       image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-      aiHint: 'developer portfolio',
+aiHint: 'developer portfolio',
       links: {
         github: '#',
       },

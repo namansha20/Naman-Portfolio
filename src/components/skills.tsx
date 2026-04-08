@@ -1,16 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import type { SkillsData } from '@/lib/data';
-import { Code, Database, Cloud, Cog, Users, Lightbulb } from 'lucide-react';
+import { Code, Library, Cog, Cloud, Bot, Hammer } from 'lucide-react';
 
 const iconMap: { [key: string]: React.ReactElement } = {
-  'Programming Languages': <Code className="h-6 w-6" />,
-  'SAP Technologies': <Cog className="h-6 w-6" />,
-  'Web Development': <Code className="h-6 w-6" />,
-  'Cloud & Platforms': <Cloud className="h-6 w-6" />,
-  'Version Control & Collaboration': <Users className="h-6 w-6" />,
-  'Frameworks & Tools': <Cog className="h-6 w-6" />,
-  'Development Methodologies': <Lightbulb className="h-6 w-6" />,
+  'Languages': <Code className="h-6 w-6" />,
+  'Frameworks & Libraries': <Library className="h-6 w-6" />,
+  'SAP Specialized': <Cog className="h-6 w-6" />,
+  'Platform': <Cloud className="h-6 w-6" />,
+  'AIML': <Bot className="h-6 w-6" />,
+  'Tools': <Hammer className="h-6 w-6" />,
 };
 
 type SkillsProps = {
