@@ -108,6 +108,12 @@ Passionate about combining technology and business to create impactful digital s
       period: 'June 2025',
       description: 'Completed professional training in SAP Business Technology Platform (BTP), focusing on end-to-end cloud application development with CAPM, Fiori Elements, and HANA integration. Gained hands-on experience in deploying secure apps using BTP services, Cloud Foundry, and modern DevOps practices.',
     },
+    {
+      company: 'Anubhav Trainings',
+      role: 'SAP Generative AI on BTP',
+      period: '2026',
+      description: 'Master Python to AI-The course builds a strong foundation in Python, then advances through machine learning, NLP, and modern frameworks like Langchain, LangGraph, and RAG.      Apply AI on SAP BTP-Learners implement real-world scenarios such as intelligent chatbots, RAG-powered apps with HANA Vector Engine, and AI integration with SAP S/4HANA systems.',
+    },
   ],
   skills: {
     'Languages': ['JavaScript', 'Python'],
