@@ -1,3 +1,4 @@
+import placeholderImages from './placeholder-images.json';
 
 export type HeroData = {
   name: string;
@@ -73,7 +74,7 @@ type PortfolioData = {
   contact: ContactData;
 };
 
-export const portfolioData: PortfolioData = {
+const rawData = {
   hero: {
     name: 'Naman Sharma',
     title: 'SAP Certified Associate - Backend Developer - CAPM | SAP Certified - SAP Generative AI Developer | Node.js | Python',
@@ -133,8 +134,6 @@ Skilled in designing modular architectures, integrating APIs, and working with d
       title: 'SAP Copilot– Conversational SAP Expert Assistant',
       description: 'Exposed a FastAPI REST API backed by Mistral AI (mistral-small) for multi-turn SAP Q&A, with per-session chat history stored in a session id-keyed in-memory store. Organized the codebase into a modular routes/services/utils/rag layout and seeded the rag/data/ directory with SAP Generative AI certification docs for a future retrieval pipeline. Scaffolded SAP BTP deployment via mta.yaml with planned OAuth 2.0 auth, persistent storage, and live SAP system integration hooks.',
       technologies: ['FastAPI', 'Mistral AI', 'SAP BTP', 'Python'],
-      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-      aiHint: 'SAP assistant',
       links: {
         github: 'https://github.com/namansha20/sap-copilot',
       },
@@ -143,8 +142,6 @@ Skilled in designing modular architectures, integrating APIs, and working with d
       title: 'PU-Chatbot– University Query Assistant',
       description: 'Deployed a dual-component student query system on SAP BTP Cloud Foundry with a FastAPI backend and Streamlit frontend as separate CF app instances. Matched student questions against a 92-pair Excel knowledge base using TF-IDF vectorization and cosine similarity. Delivered a branded, glassmorphism-styled UI with graceful error handling, 30-second API timeout, and environment-based backend URL configuration.',
       technologies: ['SAP BTP', 'FastAPI', 'Streamlit', 'Python', 'TF-IDF'],
-      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-      aiHint: 'university chatbot',
       links: {
         github: 'https://github.com/namansha20/pu-chatbot',
       },
@@ -153,8 +150,6 @@ Skilled in designing modular architectures, integrating APIs, and working with d
       title: 'ORION-EYE– Autonomous Asteroid Detection & Evasion System',
       description: 'Tracked space debris in real time using YOLOv8 and OpenCV at 30+ FPS, predicting object trajectories across X, Y, and Z axes via physics-based velocity modeling. Classified collision threats across three severity levels (CRITICAL / HIGH / LOW) and auto-generated Delta-V evasion commands from live object motion vectors. Served live AR-overlaid video through a Flask + SQLite web dashboard with MJPEG streaming and a REST telemetry API for browser-based monitoring.',
       technologies: ['YOLOv8', 'OpenCV', 'Flask', 'SQLite', 'Python'],
-      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-      aiHint: 'asteroid detection',
       links: {
         github: 'https://github.com/namansha20/orion-eye',
       },
@@ -163,8 +158,6 @@ Skilled in designing modular architectures, integrating APIs, and working with d
       title: 'Naman Portfolio– AI-Personalized Developer Portfolio',
       description: 'Built a Next.js 15 single-page portfolio with TypeScript and Tailwind CSS, featuring dark/light theming, responsive grid layout, and live GitHub contribution heatmap. Wired Google Gemini 2.0 Flash via Genkit Server Actions. Centralized all content in a single portfolioData object so AI overrides apply at runtime without touching source data, then shipped to Firebase App Hosting with Zod-validated contact forms.',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Genkit', 'Firebase'],
-      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-aiHint: 'developer portfolio',
       links: {
         github: 'https://github.com/namansha20/Naman-Portfolio',
       },
@@ -173,8 +166,6 @@ aiHint: 'developer portfolio',
       title: 'Management system for a bookshop',
       description: 'Built a cloud-native bookshop management system on SAP BTP with Node.js CAP model. Designed Fiori Elements UI for inventory, powered by OData services and SAP HANA Cloud.',
       technologies: ['SAP BTP', 'Node.js', 'CAP', 'HANA', 'Fiori'],
-      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-      aiHint: 'bookshop management',
       links: {
         github: 'https://github.com/namansha20/library-bookshop',
       },
@@ -191,18 +182,6 @@ aiHint: 'developer portfolio',
     { name: 'Design Thinking', issuer: 'SAP' },
     { name: 'Generative AI', issuer: 'Google' },
   ],
-  certificationBadges: [
-    {
-      name: 'SAP Certified Associate - Backend Developer - SAP Cloud Application Programming',
-      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-      aiHint: 'sap certified associate badge'
-    },
-    {
-      name: 'SAP Certified - SAP Generative AI Developer',
-      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-      aiHint: 'sap certified genai badge'
-    }
-  ],
   achievements: [
     {
       title: 'Team Leader – Smart India Hackathon (SIH)',
@@ -218,4 +197,19 @@ aiHint: 'developer portfolio',
     phone: '+91 94613 61338',
     location: 'Jaipur, Rajasthan',
   },
+};
+
+const projectsWithImages = rawData.projects.map(project => {
+  const placeholder = placeholderImages.projects.find(p => p.title === project.title);
+  return {
+    ...project,
+    image: placeholder ? placeholder.image : 'https://picsum.photos/seed/placeholder/600/400',
+    aiHint: placeholder ? placeholder.aiHint : 'project image'
+  };
+});
+
+export const portfolioData: PortfolioData = {
+  ...rawData,
+  projects: projectsWithImages,
+  certificationBadges: placeholderImages.certificationBadges,
 };

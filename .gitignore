@@ -39,5 +39,6 @@ next-env.d.ts
 
 .genkit/*
 .env*
-
+.env
 firestore-debug.log
+package-lock.json

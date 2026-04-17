@@ -1,0 +1,46 @@
+{
+  "certificationBadges": [
+    {
+      "name": "SAP Certified Associate - Backend Developer - SAP Cloud Application Programming",
+      "image": "https://picsum.photos/seed/sap-backend/128/128",
+      "aiHint": "sap certified associate badge"
+    },
+    {
+      "name": "SAP Certified - SAP Generative AI Developer",
+      "image": "https://picsum.photos/seed/sap-genai/128/128",
+      "aiHint": "sap certified genai badge"
+    },
+    {
+      "name": "Google - Gen AI",
+      "image": "https://picsum.photos/seed/google-genai/128/128",
+      "aiHint": "google genai badge"
+    }
+  ],
+  "projects": [
+    {
+      "title": "SAP Copilot– Conversational SAP Expert Assistant",
+      "image": "https://picsum.photos/seed/sap-copilot/600/400",
+      "aiHint": "SAP assistant"
+    },
+    {
+      "title": "PU-Chatbot– University Query Assistant",
+      "image": "https://picsum.photos/seed/pu-chatbot/600/400",
+      "aiHint": "university chatbot"
+    },
+    {
+      "title": "ORION-EYE– Autonomous Asteroid Detection & Evasion System",
+      "image": "https://picsum.photos/seed/orion-eye/600/400",
+      "aiHint": "asteroid detection"
+    },
+    {
+      "title": "Naman Portfolio– AI-Personalized Developer Portfolio",
+      "image": "https://picsum.photos/seed/dev-portfolio/600/400",
+      "aiHint": "developer portfolio"
+    },
+    {
+      "title": "Management system for a bookshop",
+      "image": "https://picsum.photos/seed/bookshop/600/400",
+      "aiHint": "bookshop management"
+    }
+  ]
+}
