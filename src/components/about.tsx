@@ -59,7 +59,27 @@ export default function About({ summary, education, trainings, certifications, c
           </CardContent>
         </Card>
 
-        <Accordion type="multiple" className="w-full space-y-4" defaultValue={["Education", "Trainings", "Certifications", "Certification Badges", "Achievements"]}>
+        <Accordion type="multiple" className="w-full space-y-4" defaultValue={["Certification Badges", "Education", "Trainings", "Certifications", "Achievements"]}>
+          <SectionCard title="Certification Badges" icon={<Badge />}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center pt-4">
+              {certificationBadges.map((badge, i) => (
+                <div key={i} className="flex flex-col items-center text-center gap-2">
+                  <div className="relative w-32 h-32 bg-muted/50 rounded-lg flex items-center justify-center p-2">
+                    <Image
+                      src={badge.image}
+                      alt={badge.name}
+                      width={128}
+                      height={128}
+                      className="object-contain"
+                      data-ai-hint={badge.aiHint}
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground">{badge.name}</p>
+                </div>
+              ))}
+            </div>
+          </SectionCard>
+          
           <SectionCard title="Education" icon={<GraduationCap />}>
             <ul className="space-y-4">
               {education.map((edu, i) => (
@@ -93,26 +113,6 @@ export default function About({ summary, education, trainings, certifications, c
                 </li>
               ))}
             </ul>
-          </SectionCard>
-
-          <SectionCard title="Certification Badges" icon={<Badge />}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center pt-4">
-              {certificationBadges.map((badge, i) => (
-                <div key={i} className="flex flex-col items-center text-center gap-2">
-                  <div className="relative w-32 h-32 bg-muted/50 rounded-lg flex items-center justify-center p-2">
-                    <Image
-                      src={badge.image}
-                      alt={badge.name}
-                      width={128}
-                      height={128}
-                      className="object-contain"
-                      data-ai-hint={badge.aiHint}
-                    />
-                  </div>
-                  <p className="text-xs text-muted-foreground">{badge.name}</p>
-                </div>
-              ))}
-            </div>
           </SectionCard>
 
           <SectionCard title="Achievements" icon={<Trophy />}>
