@@ -28,6 +28,12 @@ export type Certification = {
   issuer: string;
 };
 
+export type CertificationBadge = {
+  name: string;
+  image: string;
+  aiHint: string;
+};
+
 export type Achievement = {
   title: string;
   description: string;
@@ -62,6 +68,7 @@ type PortfolioData = {
   skills: SkillsData;
   projects: Project[];
   certifications: Certification[];
+  certificationBadges: CertificationBadge[];
   achievements: Achievement[];
   contact: ContactData;
 };
@@ -69,7 +76,7 @@ type PortfolioData = {
 export const portfolioData: PortfolioData = {
   hero: {
     name: 'Naman Sharma',
-    title: 'SAP BTP CAPM Developer | Node.js | Python | Generative AI',
+    title: 'SAP Certified Associate - Backend Developer - CAPM | SAP Certified - SAP Generative AI Developer | Node.js | Python',
     subtitle: 'Passionate about solving real-world problems using SAP BTP, CAPM, and modern cloud technologies. Focused on backend systems, clean architecture, and exploring Generative AI to build smarter applications.',
     social: {
       linkedin: 'https://www.linkedin.com/in/namans20/',
@@ -78,9 +85,7 @@ export const portfolioData: PortfolioData = {
   },
   summary: `SAP BTP CAPM Developer with hands-on experience building scalable, cloud-native applications using SAP BTP, CAPM, and SAP Fiori Elements. Strong foundation in Node.js and REST API design, with experience developing real-world projects like AI-powered assistants and cloud-deployed backend systems.
 
-Skilled in designing modular architectures, integrating APIs, and working with data-driven systems. Currently exploring Generative AI and Python to build intelligent, future-ready applications.
-
-Passionate about combining technology and business to create impactful digital solutions.`,
+Skilled in designing modular architectures, integrating APIs, and working with data-driven systems. Currently exploring Generative AI and Python to build intelligent, future-ready applications.`,
   education: [
     {
       university: 'Poornima University',
@@ -176,6 +181,8 @@ aiHint: 'developer portfolio',
     },
   ],
   certifications: [
+    { name: 'SAP Certified Associate - Backend Developer - SAP Cloud Application Programming', issuer: 'SAP' },
+    { name: 'SAP Certified - SAP Generative AI Developer', issuer: 'SAP' },
     { name: 'SAP Generative AI on SAP BTP', issuer: 'Anubhav Training' },
     { name: 'SAP Cloud Application Programming Model', issuer: 'SAP' },
     { name: 'SAP BTP CAPM (Cloud Application Programming Model)', issuer: 'Anubhav Trainings' },
@@ -183,6 +190,18 @@ aiHint: 'developer portfolio',
     { name: 'Creating Applications and Extensions using SAP Build Code', issuer: 'SAP' },
     { name: 'Design Thinking', issuer: 'SAP' },
     { name: 'Generative AI', issuer: 'Google' },
+  ],
+  certificationBadges: [
+    {
+      name: 'SAP Certified Associate - Backend Developer - SAP Cloud Application Programming',
+      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      aiHint: 'sap certified associate badge'
+    },
+    {
+      name: 'SAP Certified - SAP Generative AI Developer',
+      image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      aiHint: 'sap certified genai badge'
+    }
   ],
   achievements: [
     {

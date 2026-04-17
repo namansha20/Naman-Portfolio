@@ -1,14 +1,16 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import type { Education, Training, Certification, Achievement } from "@/lib/data";
-import { GraduationCap, Briefcase, Award, Trophy, Star } from "lucide-react";
+import type { Education, Training, Certification, Achievement, CertificationBadge } from "@/lib/data";
+import { GraduationCap, Briefcase, Award, Trophy, Star, Badge } from "lucide-react";
+import Image from "next/image";
 
 type AboutProps = {
   summary: string;
   education: Education[];
   trainings: Training[];
   certifications: Certification[];
+  certificationBadges: CertificationBadge[];
   achievements: Achievement[];
   isTailoring: boolean;
 };
@@ -29,7 +31,7 @@ const SectionCard = ({ title, icon, children }: { title: string; icon: React.Rea
   </Card>
 );
 
-export default function About({ summary, education, trainings, certifications, achievements, isTailoring }: AboutProps) {
+export default function About({ summary, education, trainings, certifications, certificationBadges, achievements, isTailoring }: AboutProps) {
   return (
     <section id="about" className="py-16 bg-muted/50">
       <div className="container">
@@ -57,7 +59,7 @@ export default function About({ summary, education, trainings, certifications, a
           </CardContent>
         </Card>
 
-        <Accordion type="multiple" className="w-full space-y-4" defaultValue={["Education", "Trainings", "Certifications", "Achievements"]}>
+        <Accordion type="multiple" className="w-full space-y-4" defaultValue={["Education", "Trainings", "Certifications", "Certification Badges", "Achievements"]}>
           <SectionCard title="Education" icon={<GraduationCap />}>
             <ul className="space-y-4">
               {education.map((edu, i) => (
@@ -91,6 +93,26 @@ export default function About({ summary, education, trainings, certifications, a
                 </li>
               ))}
             </ul>
+          </SectionCard>
+
+          <SectionCard title="Certification Badges" icon={<Badge />}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center pt-4">
+              {certificationBadges.map((badge, i) => (
+                <div key={i} className="flex flex-col items-center text-center gap-2">
+                  <div className="relative w-32 h-32 bg-muted/50 rounded-lg flex items-center justify-center p-2">
+                    <Image
+                      src={badge.image}
+                      alt={badge.name}
+                      width={128}
+                      height={128}
+                      className="object-contain"
+                      data-ai-hint={badge.aiHint}
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground">{badge.name}</p>
+                </div>
+              ))}
+            </div>
           </SectionCard>
 
           <SectionCard title="Achievements" icon={<Trophy />}>

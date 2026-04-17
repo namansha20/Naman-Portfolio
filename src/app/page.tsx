@@ -55,6 +55,7 @@ export default function Home() {
           education={portfolioData.education}
           trainings={portfolioData.Trainings}
           certifications={portfolioData.certifications}
+          certificationBadges={portfolioData.certificationBadges}
           achievements={portfolioData.achievements}
           isTailoring={isTailoring}
         />
