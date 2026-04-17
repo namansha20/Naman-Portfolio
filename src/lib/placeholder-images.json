@@ -2,12 +2,12 @@
   "certificationBadges": [
     {
       "name": "SAP Certified Associate - Backend Developer - SAP Cloud Application Programming",
-      "image": "/badges/sap-backend-dev.png",
+      "image": "/badges/sap-certified-capm.png",
       "aiHint": "sap certified associate badge"
     },
     {
       "name": "SAP Certified - SAP Generative AI Developer",
-      "image": "/badges/sap-genai-dev.png",
+      "image": "/badges/sap-genai.png",
       "aiHint": "sap certified genai badge"
     },
     {
