@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -25,17 +24,6 @@ export default function Projects({ projects, isTailoring }: ProjectsProps) {
           {projects.map((project, index) => (
             <Card key={index} className="flex flex-col shadow-lg card-lift-on-hover">
               <CardHeader>
-                {project.image.startsWith('data:image') ? null : (
-                  <div className="aspect-video relative mb-4">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="rounded-t-lg object-cover"
-                      data-ai-hint={project.aiHint}
-                    />
-                  </div>
-                )}
                 <CardTitle>{project.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.technologies.map(tech => (

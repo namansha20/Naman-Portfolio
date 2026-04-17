@@ -48,8 +48,6 @@ export type Project = {
   title:string;
   description: string;
   technologies: string[];
-  image: string;
-  aiHint: string;
   links: {
     github?: string;
   };
@@ -74,7 +72,7 @@ type PortfolioData = {
   contact: ContactData;
 };
 
-const rawData = {
+const rawData: Omit<PortfolioData, 'certificationBadges'> = {
   hero: {
     name: 'Naman Sharma',
     title: 'SAP Certified Associate - Backend Developer - CAPM | SAP Certified - SAP Generative AI Developer | Node.js | Python',
@@ -199,17 +197,7 @@ Skilled in designing modular architectures, integrating APIs, and working with d
   },
 };
 
-const projectsWithImages = rawData.projects.map(project => {
-  const placeholder = placeholderImages.projects.find(p => p.title === project.title);
-  return {
-    ...project,
-    image: placeholder ? placeholder.image : 'https://picsum.photos/seed/placeholder/600/400',
-    aiHint: placeholder ? placeholder.aiHint : 'project image'
-  };
-});
-
 export const portfolioData: PortfolioData = {
   ...rawData,
-  projects: projectsWithImages,
   certificationBadges: placeholderImages.certificationBadges,
 };
