@@ -172,6 +172,7 @@ Skilled in designing modular architectures, integrating APIs, and working with d
   certifications: [
     { name: 'SAP Certified Associate - Backend Developer - SAP Cloud Application Programming', issuer: 'SAP' },
     { name: 'SAP Certified - SAP Generative AI Developer', issuer: 'SAP' },
+    { name: 'SAP Certified - SAP Fiori Application Developer', issuer: 'SAP' },
     { name: 'SAP Generative AI on SAP BTP', issuer: 'Anubhav Training' },
     { name: 'SAP Cloud Application Programming Model', issuer: 'SAP' },
     { name: 'SAP BTP CAPM (Cloud Application Programming Model)', issuer: 'Anubhav Trainings' },
