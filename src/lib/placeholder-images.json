@@ -11,6 +11,11 @@
       "aiHint": "sap certified genai badge"
     },
     {
+      "name": "SAP Certified - SAP Fiori Application Developer",
+      "image": "/badges/sap-certified-sap-fiori-application-developer.png",
+      "aiHint": "sap certified associate badge"
+    },
+    {
       "name": "Google - Gen AI",
       "image": "/badges/google-genai.png",
       "aiHint": "google genai badge"
